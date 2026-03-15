@@ -44,8 +44,8 @@ def make_dataset(files, sample_rate, trim = True):
 def export_tflite(model_tf):
     converter = tf.lite.TFLiteConverter.from_keras_model(model_tf)
     tflite_model = converter.convert()
-    os.makedirs('../model', exist_ok=True)
-    with open('../model/model.tflite', 'wb') as f:
+    os.makedirs('./model', exist_ok=True)
+    with open('./model/model.tflite', 'wb') as f:
         f.write(tflite_model)
     print(f"{'*'*60}\nSaved the model as model.tflite\n{'*'*60}") 
 
