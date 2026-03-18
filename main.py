@@ -18,7 +18,7 @@ def get_files(audio_dir):
 
     if len(files) == 0:
         print("No audio files found.")
-        return [];
+        return []
     else:
         print(f"Got {len(files)} from the folder {audio_dir}\n")
         return files
